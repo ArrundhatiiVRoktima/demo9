@@ -1,0 +1,393 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  margin: 0 !important;
+  overflow: auto !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #000;
+  font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+}
+
+a{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:visited {
+  color: black;
+}
+
+.top-header {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  width : 100%;
+  height :max-content;
+  overflow-x : auto;
+  overflow-x : auto;
+  box-shadow: #464646 0px 0px 5px 1px;
+  position:relative;
+  padding-top: 103px;
+  margin-bottom: 0%;
+}
+
+.top-header ul{
+  list-style-type: none;
+}
+
+.facebook {
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+  text-decoration:none;
+  vertical-align: middle;
+}
+
+.facebook:hover{
+  opacity: 0.7;
+}
+
+.left-content, .right-content {
+  display: inline-block;
+  margin-top : 0;
+}
+
+.left-content {
+  margin-top: 9px;
+}
+
+.right-content {
+  float: right;
+  margin-top: 7px;
+  vertical-align: middle;
+}
+
+.socialmedia{
+  margin-top: 7px;
+}
+
+.contact_direct{
+  text-decoration:none;
+  color: #000;
+}
+
+.contact_direct:visited{
+  color: black;
+}
+
+.contact_direct:hover{
+  text-decoration:none;
+  color: #000;
+}
+
+header {
+  background: #001d06;
+  font-weight: 700;
+  height: fit-content;
+  box-shadow: #464646 0px 0px 5px 1px;
+}
+
+nav{
+  background: #002a08;
+  padding: 5px 20px;
+  height: fit-content;
+  box-shadow: #464646 0px 0px 5px 1px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/*#8affa1*/
+nav ul{
+  list-style-type: none;
+}
+
+nav a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+nav a:not(.top-logo):hover{
+  text-decoration: underline;
+}
+
+.top-logo:hover{
+  text-decoration: none;
+}
+
+.menu li{
+  font-size :18px;
+  padding : 0px 20px;
+  margin: 20px;
+  white-space: nowrap;
+}
+
+.top-logo{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-size: 18vh;
+}
+
+.menu li a{
+  display:block
+}
+
+/*Mobile Menu*/
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle{
+  order: 1;
+}
+
+.item{
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
+
+.item.active{
+  display: block;
+  text-align: left;
+  align-self: left;
+}
+
+.toggle{
+  cursor: pointer;
+}
+
+.bars{
+  background: #ffffff;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+  transform: translateY(-50%);
+}
+
+.bars::before, .bars::after{
+  background: #ffffff;
+  content : "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 18px;
+}
+
+.bars::before{
+  top: 5px;
+}
+
+.bars::after{
+  top: -5px;
+}
+
+/*Tablet Menu*/
+
+@media all and (min-width:280px){
+  .menu{
+    justify-content : center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .top-logo{
+    flex: 1;
+  }
+  .item.button
+  { width: auto;
+    order: 1;
+    display : block;
+  }
+  .toggle{
+    order:2;
+  }
+
+}
+
+/*Desktop Menu*/
+
+@media all and (min-width:1115px){
+
+  .item{
+    display: block;
+    width: auto;
+  }
+  .toggle{
+    display: none;
+  }
+  .top-logo{
+    order: 0;
+  }
+  .item{
+    order: 1;
+  }
+
+  .menu li.button{
+    padding-right: 0;
+  }
+
+  .menu{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+@media all and (min-width: 280px) and (max-width: 424px) {
+  .top-header{
+    padding-top: 170px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media all and (min-width : 425px) and (max-width : 451px){
+  .top-header{
+    padding-top: 180px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media all and (min-width : 451px) and (max-width : 541px){
+  .top-header{
+    padding-top: 185px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+section.home {
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.parallax-container{
+  border-collapse: collapse;
+  margin-top: -20px;
+  margin-bottom: -10px;
+  padding: 0px;
+  background-image: url('bg1.jpg');
+  height:min-content; 
+  background-attachment:fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+
+.home-pic{
+  border: 1px solid rgb(28, 6, 6);
+  border-radius: 50%;
+  margin-left:5%;
+  margin-top: 10%;
+  margin-right: 2%;
+  height: 30%;
+  width: 30%;
+}
+
+.home-quote{
+  text-align: left;
+  line-height: 0.5%;
+  color: #002a08;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.home-quote, .home-pic{
+  display: inline-block;
+  vertical-align:middle;
+}
+
+#home-logo{
+  height: 50%;
+  width: 50%;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+
+#home-h1{
+  font-size: 55px;
+  font-weight:1000;
+}
+
+#home-h2{
+  font-size: 45px;
+  font-weight: 700;
+}
+
+#home-h3{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+/*compatibility in other devices
+320-540
+540-730
+730-860
+860-1216
+*/
+
+@media all and (min-width : 320px) and (max-width : 540px){
+  #home-h1{
+    font-size: 35px;
+    font-weight:600;
+  }
+  
+  #home-h2{
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  #home-h3{
+    font-size: 25px;
+    font-weight: 300;
+  }
+  
+  #home-h1, #home-h2, #home-h3{
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+
+  #home-logo{
+    height: 70px;
+    width: 250px;
+    margin-left: 6%;
+  }
+
+  .home-pic{
+    margin-left:5%;
+    margin-right: 2%;
+    height: 200px;
+    width: 200px;
+  }
+}
